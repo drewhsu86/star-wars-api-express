@@ -24,6 +24,10 @@ app.get('/', (req, res) => {
 // so it's a string (and the path is ./resources/fixtures)
 
 app.get('/:category', (req, res) => {
+
+  // to deal with CORS header 
+  res.header('Access-Control-Allow-Origin', '*')
+
   // first page is just the first 10 page results 
   // and it would be similar code to the Kth page 
   const pageLimit = 10
@@ -66,6 +70,10 @@ app.get('/:category', (req, res) => {
 
 
 app.get('/:category/page/:id', (req, res) => {
+
+  // to deal with CORS header 
+  res.header('Access-Control-Allow-Origin', '*')
+
   // first page is just the first 10 page results 
   // and it would be similar code to the Kth page 
   const pageLimit = 10
@@ -129,6 +137,10 @@ app.get('/:category/page/:id', (req, res) => {
 
 
 app.get('/:category/:id', (req, res) => {
+
+  // to deal with CORS header 
+  res.header('Access-Control-Allow-Origin', '*')
+
   // this just returns the object of the particular index 
   // indicated by id in a particular category 
 
