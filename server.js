@@ -48,7 +48,7 @@ app.get('/:category', (req, res) => {
         let idx = 0
         const filteredTable = table.filter((entry) => {
           idx++
-          return idx < pageLimit
+          return idx <= pageLimit
         })
         // we do the second step of only grabbing fields
         fields = filteredTable.map((obj) => {
@@ -110,7 +110,7 @@ app.get('/:category/page/:id', (req, res) => {
         // we start at entry 50 (index 49)
         let idx = 0
         pageStart = pageLimit * num - 1
-        pageEnd = pageStart + pageLimit
+        pageEnd = pageStart + pageLimit + 1
 
         const filteredTable = table.filter(() => {
           idx++
