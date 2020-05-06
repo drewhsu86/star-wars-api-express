@@ -124,6 +124,7 @@ app.get('/:category/page/:id', (req, res) => {
         res.json(fields)
 
       } catch (er) {
+        res.status(404)
         res.json(er)
       }
     })
