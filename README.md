@@ -1,6 +1,8 @@
 # star-wars-api-express
 Copied SWAPI JSON files but wrote a server in Express
 
+[On Heroku](https://star-wars-api-copy-express.herokuapp.com)
+
 ## Summary
 
 In 2020, the [Star Wars API, or SWAPI](https://swapi.co/) stopped being maintained, while I was working on an API project. 
